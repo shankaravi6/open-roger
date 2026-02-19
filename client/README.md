@@ -3,7 +3,7 @@ This is the **Open Roger** client: a Next.js app for the human-approved, multi-a
 ## Demo mode (frontend only, no backend / no DB)
 
 - Set `NEXT_PUBLIC_DEMO_MODE=true` in `.env.local`, or leave `NEXT_PUBLIC_API_URL` unset.
-- Sign in with Clerk. Create a project (e.g. “Create a Gym CRM from scratch”). Data is stored in **localStorage**.
+- Open the dashboard. Create a project (e.g. “Create a Gym CRM from scratch”). Data is stored in **localStorage**.
 - Use the dashboard: live folder structure, phase workflow, default agents, mock file contents. Approve phases to advance; add custom agents.
 
 ## Getting Started

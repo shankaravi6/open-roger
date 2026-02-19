@@ -44,7 +44,7 @@ export default function Home() {
           style={{ color: theme.foreground }}
         >
           <LogIn className="h-4 w-4" />
-          Sign in
+          Dashboard
         </Link>
       </header>
 

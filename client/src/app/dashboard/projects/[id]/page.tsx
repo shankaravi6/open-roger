@@ -1,5 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 import { getProject, getAgents, getApprovals, getTasks } from "@/lib/api";
 import { ProjectDetail } from "./ProjectDetail";
 import { ProjectDetailDemoClient } from "./ProjectDetailDemoClient";
@@ -12,11 +10,9 @@ const PHASE_LABELS: Record<string, string> = {
   review_refinement: "Review / Refinement",
 };
 
-const isDemo = () =>
-  process.env.NEXT_PUBLIC_DEMO_MODE === "true" ||
-  !process.env.NEXT_PUBLIC_API_URL ||
-  !process.env.NEXT_CLERK_PUBLISHABLE_KEY ||
-  !process.env.CLERK_SECRET_KEY;
+const useBackend = () =>
+  process.env.NEXT_PUBLIC_DEMO_MODE !== "true" &&
+  Boolean(process.env.NEXT_PUBLIC_API_URL);
 
 export default async function ProjectPage({
   params,
@@ -25,19 +21,11 @@ export default async function ProjectPage({
 }) {
   const { id } = await params;
 
-  if (isDemo()) {
+  if (!useBackend()) {
     return <ProjectDetailDemoClient userId="demo-user" projectId={id} />;
   }
 
-  let userId: string | null = null;
-  try {
-    const authResult = await auth();
-    userId = authResult.userId;
-  } catch {
-    redirect("/sign-in");
-  }
-  if (!userId) redirect("/sign-in");
-
+  const userId = "demo-user";
   let project: Awaited<ReturnType<typeof getProject>>;
   let agents: Awaited<ReturnType<typeof getAgents>> = [];
   let approvals: Awaited<ReturnType<typeof getApprovals>> = [];
