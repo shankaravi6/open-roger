@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { UserButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/nextjs";
 
@@ -12,7 +13,16 @@ const hasClerkKey = Boolean(
 function TopbarDemo() {
   return (
     <header className="flex h-14 items-center justify-between border-b border-white/10 bg-surface px-4 md:px-6">
-      <div className="text-lg font-semibold text-white">SyncNet</div>
+      <Link href="/" className="flex items-center gap-2">
+        <Image
+          src="/images/or-logo.png"
+          alt="Open Roger"
+          width={32}
+          height={32}
+          className="h-8 w-8 object-contain"
+        />
+        <span className="text-lg font-semibold text-white">Open Roger</span>
+      </Link>
       <div className="flex items-center gap-3">
         <span className="text-sm text-muted-teal">
           Hi, <span className="font-medium text-pink">Demo user</span>
@@ -38,7 +48,16 @@ function TopbarWithClerk() {
 
   return (
     <header className="flex h-14 items-center justify-between border-b border-white/10 bg-surface px-4 md:px-6">
-      <div className="text-lg font-semibold text-white">SyncNet</div>
+      <Link href="/" className="flex items-center gap-2">
+        <Image
+          src="/images/or-logo.png"
+          alt="Open Roger"
+          width={32}
+          height={32}
+          className="h-8 w-8 object-contain"
+        />
+        <span className="text-lg font-semibold text-white">Open Roger</span>
+      </Link>
       <div className="flex items-center gap-3">
         <span className="text-sm text-muted-teal">
           Hi, <span className="font-medium text-pink">{displayName}</span>

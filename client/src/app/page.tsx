@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Sparkles, LogIn, UserPlus, ArrowRight, Zap } from "lucide-react";
+import Image from "next/image";
+import { Sparkles, LogIn, UserPlus } from "lucide-react";
 
 /** Theme: #2a3038 (base), #ca786d (accent) */
 const theme = {
@@ -28,13 +29,14 @@ export default function Home() {
           className="font-title flex items-center gap-2 font-semibold tracking-tight"
           style={{ color: theme.foreground }}
         >
-          <span
-            className="glass flex h-9 w-9 items-center justify-center rounded-lg"
-            style={{ backgroundColor: theme.accent }}
-          >
-            <Zap className="h-5 w-5 text-white" />
-          </span>
-          <span>SyncNet</span>
+          <Image
+            src="/images/or-logo.png"
+            alt="Open Roger"
+            width={36}
+            height={36}
+            className="h-9 w-9 object-contain"
+          />
+          <span>Open Roger</span>
         </Link>
         <Link
           href="/dashboard"
@@ -71,7 +73,7 @@ export default function Home() {
             className="mx-auto mt-6 max-w-xl text-base md:text-lg"
             style={{ color: theme.muted }}
           >
-            Describe your app in plain English. SyncNet creates the codebase
+            Describe your app in plain English. Open Roger creates the codebase
             with AI agents—every step visible and approved by you.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -98,7 +100,7 @@ export default function Home() {
       {/* Footer strip - glass */}
       <footer className="glass shrink-0 px-6 py-3 md:px-8">
         <p className="text-center text-xs" style={{ color: theme.muted }}>
-          SyncNet
+          Open Roger
         </p>
       </footer>
     </div>

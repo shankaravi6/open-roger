@@ -1,4 +1,4 @@
-This is the **SyncNet** client: a Next.js app for the human-approved, multi-agent software factory.
+This is the **Open Roger** client: a Next.js app for the human-approved, multi-agent software factory.
 
 ## Demo mode (frontend only, no backend / no DB)
 

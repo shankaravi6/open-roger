@@ -23,9 +23,10 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: "SyncNet – Multi-agent software factory",
+  title: "Open Roger – Multi-agent software factory",
   description:
     "Turn intent into real, evolving code. Create and evolve applications with AI agents under mandatory approval at every phase.",
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({

@@ -34,7 +34,7 @@ export function CreateProjectForm() {
     <form onSubmit={handleSubmit} className="liquid-glass-card rounded-2xl p-6">
       <h2 className="text-lg font-semibold text-white">Create a new project</h2>
       <p className="mt-1 text-sm text-muted-teal">
-        Describe what you want to build in plain English. SyncNet will create a
+        Describe what you want to build in plain English. Open Roger will create a
         workspace and assign default agents.
       </p>
       <div className="mt-4">

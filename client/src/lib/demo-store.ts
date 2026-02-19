@@ -12,7 +12,7 @@ import {
 
 type StoredProject = ReturnType<typeof createDemoProject>;
 
-const KEY_PREFIX = "syncnet-demo-projects-";
+const KEY_PREFIX = "open-roger-demo-projects-";
 
 function storageKey(userId: string): string {
   return `${KEY_PREFIX}${userId}`;

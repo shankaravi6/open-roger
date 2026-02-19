@@ -9,7 +9,7 @@ import tasksRouter from "./routes/tasks.js";
 
 const PORT = 1001;
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/syncnet";
+  process.env.MONGODB_URI || "mongodb://localhost:27017/open-roger";
 
 const app = express();
 app.use(

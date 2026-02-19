@@ -1,30 +1,30 @@
-# SyncNet – Requirements Document (Factory Mode)
+# Open Roger – Requirements Document (Factory Mode)
 
 ## 1. Overview
 
-SyncNet is a **web-based software factory platform** that creates and evolves real applications using multiple AI agents under human approval.
+Open Roger is a **web-based software factory platform** that creates and evolves real applications using multiple AI agents under human approval.
 
-A user describes what they want to build in natural language (for example: _“Create a Gym CRM from scratch”_). SyncNet then assigns specialized agents to plan, build, review, and improve the project step by step — with **live visibility and mandatory approvals at every phase**.
+A user describes what they want to build in natural language (for example: _“Create a Gym CRM from scratch”_). Open Roger then assigns specialized agents to plan, build, review, and improve the project step by step — with **live visibility and mandatory approvals at every phase**.
 
 ---
 
 ## 2. Core Concept
 
-**SyncNet = Factory**
+**Open Roger = Factory**
 **Projects (e.g., Gym CRM) = Factory Output**
 
-SyncNet does not run customer business data. It **creates and maintains project codebases** in a controlled, observable, and updatable way.
+Open Roger does not run customer business data. It **creates and maintains project codebases** in a controlled, observable, and updatable way.
 
 ---
 
 ## 3. Entry Flow (User Experience)
 
-1. User opens SyncNet web application
+1. User opens Open Roger web application
 2. User enters a prompt:
 
    > "Create a Gym CRM from scratch"
 
-3. SyncNet creates a new project workspace
+3. Open Roger creates a new project workspace
 4. Default agents are attached
 5. Project enters Phase 1 (Architecture)
 
@@ -119,7 +119,7 @@ Nothing advances without explicit user approval.
 
 ## 8. Factory Technology Stack (Strict – Phase 1)
 
-SyncNet enforces a **single factory stack** for all created projects:
+Open Roger enforces a **single factory stack** for all created projects:
 
 - Frontend: **Next.js**
 - Backend: **Node.js**
@@ -137,7 +137,7 @@ Reason:
 
 ## 9. Automated Project Creation (Real Execution)
 
-When a project starts, SyncNet automatically performs **real system actions**:
+When a project starts, Open Roger automatically performs **real system actions**:
 
 - Runs `npx create-next-app` for frontend
 - Initializes Node.js backend
@@ -170,7 +170,7 @@ This structure is always maintained.
 
 ## 11. Storage Model
 
-### SyncNet Database (MongoDB)
+### Open Roger Database (MongoDB)
 
 Stores only metadata:
 
@@ -185,7 +185,7 @@ Stores only metadata:
 - File system (Phase 1)
 - Migration to GitHub / AWS later
 
-SyncNet never stores Gym CRM business data.
+Open Roger never stores Gym CRM business data.
 
 ---
 
@@ -209,7 +209,7 @@ No destructive changes without approval.
 
 ## 13. Authentication & Accounts (Phase 1)
 
-SyncNet uses **Clerk** for authentication and user management.
+Open Roger uses **Clerk** for authentication and user management.
 
 ### 13.1 Supported Auth
 
@@ -226,7 +226,7 @@ Users may optionally connect their GitHub account.
 
 ### 14.1 Capabilities
 
-- Import an existing repository into SyncNet
+- Import an existing repository into Open Roger
 - Assign agents to an existing codebase
 - Run agents in controlled phases
 - Apply updates via commits
@@ -264,7 +264,7 @@ Not required for Phase 1.
 
 ## 15. Phase 1 Success Criteria
 
-SyncNet Phase 1 is successful if:
+Open Roger Phase 1 is successful if:
 
 - A user can describe an app in plain English
 - A real codebase is created automatically
@@ -276,4 +276,4 @@ SyncNet Phase 1 is successful if:
 
 ## 16. One-Line Summary
 
-**SyncNet is a human-approved, multi-agent software factory that turns intent into real, evolving code — using a fixed, reliable stack.**
+**Open Roger is a human-approved, multi-agent software factory that turns intent into real, evolving code — using a fixed, reliable stack.**

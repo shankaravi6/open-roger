@@ -1,5 +1,5 @@
 /**
- * SyncNet API client.
+ * Open Roger API client.
  * When NEXT_PUBLIC_DEMO_MODE=true, uses in-memory/localStorage demo (no backend).
  */
 

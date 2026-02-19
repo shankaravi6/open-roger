@@ -5,7 +5,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "App preview – SyncNet",
+  title: "App preview – Open Roger",
   robots: "noindex",
 };
 
@@ -84,7 +84,7 @@ function DefaultPreview() {
             </table>
           </div>
           <p className="mt-4 text-xs text-slate-400">
-            Live preview (demo) · Built by SyncNet
+            Live preview (demo) · Built by Open Roger
           </p>
         </main>
       </div>
@@ -163,7 +163,7 @@ function DarkPreview() {
             </table>
           </div>
           <p className="mt-4 text-xs text-slate-500">
-            Live preview (demo) · Dark theme · Built by SyncNet
+            Live preview (demo) · Dark theme · Built by Open Roger
           </p>
         </main>
       </div>
@@ -251,7 +251,7 @@ function GlassmorphismPreview() {
             </table>
           </div>
           <p className="mt-4 text-xs text-slate-500">
-            Live preview (demo) · Glassmorphism UI · Built by SyncNet
+            Live preview (demo) · Glassmorphism UI · Built by Open Roger
           </p>
         </main>
       </div>
