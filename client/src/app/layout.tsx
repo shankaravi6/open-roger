@@ -5,7 +5,7 @@ import "./globals.css";
 
 // Only enable Clerk when both keys are set (avoids 500 on Vercel if only publishable key is set)
 const hasClerkKey = Boolean(
-  process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && process.env.CLERK_SECRET_KEY,
+  process.env.NEXT_CLERK_PUBLISHABLE_KEY && process.env.CLERK_SECRET_KEY,
 );
 
 const michroma = Michroma({

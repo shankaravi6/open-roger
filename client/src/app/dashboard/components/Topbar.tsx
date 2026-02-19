@@ -6,8 +6,7 @@ import { UserButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/nextjs";
 
 const hasClerkKey = Boolean(
-  typeof process !== "undefined" &&
-  process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+  typeof process !== "undefined" && process.env.NEXT_CLERK_PUBLISHABLE_KEY,
 );
 
 function TopbarDemo() {

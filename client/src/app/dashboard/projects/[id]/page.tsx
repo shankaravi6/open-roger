@@ -15,7 +15,7 @@ const PHASE_LABELS: Record<string, string> = {
 const isDemo = () =>
   process.env.NEXT_PUBLIC_DEMO_MODE === "true" ||
   !process.env.NEXT_PUBLIC_API_URL ||
-  !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ||
+  !process.env.NEXT_CLERK_PUBLISHABLE_KEY ||
   !process.env.CLERK_SECRET_KEY;
 
 export default async function ProjectPage({
