@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
-const pngPath = path.join(root, "public", "images", "or-logo.png");
+const pngPath = path.join(root, "public", "images", "or-or-logo.png");
 const icoPath = path.join(root, "src", "app", "favicon.ico");
 
 // Normalize PNG with sharp (handles various encodings) then convert to ICO
