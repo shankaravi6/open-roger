@@ -9,14 +9,21 @@ import { DashboardDemoClient } from "./components/DashboardDemoClient";
 const isDemo = () =>
   process.env.NEXT_PUBLIC_DEMO_MODE === "true" ||
   !process.env.NEXT_PUBLIC_API_URL ||
-  !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ||
+  !process.env.CLERK_SECRET_KEY;
 
 export default async function DashboardPage() {
   if (isDemo()) {
     return <DashboardDemoClient userId="demo-user" />;
   }
 
-  const { userId } = await auth();
+  let userId: string | null = null;
+  try {
+    const authResult = await auth();
+    userId = authResult.userId;
+  } catch {
+    redirect("/sign-in");
+  }
   if (!userId) redirect("/sign-in");
 
   let projects: {

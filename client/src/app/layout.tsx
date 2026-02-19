@@ -3,7 +3,10 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Michroma, Inconsolata, Ubuntu } from "next/font/google";
 import "./globals.css";
 
-const hasClerkKey = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
+// Only enable Clerk when both keys are set (avoids 500 on Vercel if only publishable key is set)
+const hasClerkKey = Boolean(
+  process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && process.env.CLERK_SECRET_KEY,
+);
 
 const michroma = Michroma({
   variable: "--font-title",

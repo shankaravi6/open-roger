@@ -6,7 +6,8 @@ import { Sidebar } from "./components/Sidebar";
 const isDemo = () =>
   process.env.NEXT_PUBLIC_DEMO_MODE === "true" ||
   !process.env.NEXT_PUBLIC_API_URL ||
-  !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ||
+  !process.env.CLERK_SECRET_KEY;
 
 export default async function DashboardLayout({
   children,
@@ -14,8 +15,12 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }) {
   if (!isDemo()) {
-    const { userId } = await auth();
-    if (!userId) redirect("/sign-in");
+    try {
+      const { userId } = await auth();
+      if (!userId) redirect("/sign-in");
+    } catch {
+      redirect("/sign-in");
+    }
   }
 
   return (

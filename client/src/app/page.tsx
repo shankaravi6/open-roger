@@ -30,7 +30,7 @@ export default function Home() {
           style={{ color: theme.foreground }}
         >
           <Image
-            src="/images/or-logo.png"
+            src="/images/logo.png"
             alt="Open Roger"
             width={36}
             height={36}

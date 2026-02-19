@@ -15,7 +15,7 @@ function TopbarDemo() {
     <header className="flex h-14 items-center justify-between border-b border-white/10 bg-surface px-4 md:px-6">
       <Link href="/" className="flex items-center gap-2">
         <Image
-          src="/images/or-logo.png"
+          src="/images/logo.png"
           alt="Open Roger"
           width={32}
           height={32}
@@ -50,7 +50,7 @@ function TopbarWithClerk() {
     <header className="flex h-14 items-center justify-between border-b border-white/10 bg-surface px-4 md:px-6">
       <Link href="/" className="flex items-center gap-2">
         <Image
-          src="/images/or-logo.png"
+          src="/images/logo.png"
           alt="Open Roger"
           width={32}
           height={32}
